@@ -33,6 +33,10 @@ main {
     grid-template-columns: 1fr 5fr;
 }
 
+main section {
+    overflow: hidden;
+}
+
 main .content {
     padding: 20px;
 }
@@ -66,4 +70,47 @@ main .content .card {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* media - quarry */
+
+@media screen and (max-width:900px) {
+    main {
+        grid-template-columns: 2fr 4fr
+    }
+
+    main .content .cards {
+        grid-template-columns: repeat(2, 5fr);
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    main .menu {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main .content .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav span {
+
+        margin-bottom: 15px;
+    }
+
+    .main-container {
+        font-size: 1.3em;
+    }
+
+
 }
